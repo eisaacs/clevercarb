@@ -2,13 +2,10 @@
     'use strict';
 
     angular
-        .module('reelr.movies.factory', [])
-        .factory('moviesFactory', moviesFactory);
+        .module('clevercarb.calculate.controller')
+        .factory('calculateFactory', calculateFactory);
 
-    moviesFactory.$inject = ['$http'];
-
-    /* @ngInject */
-    function moviesFactory($http) {
+    function calculateFactory() {
         
     	var service = {
     		foo: fooMethod, 
