@@ -14,6 +14,7 @@ Mountaintop Project
   - `$ cd clevercarb`
 - Install dependencies  
   - `$ npm install && bower install`
+  - Note, install `bower` using `$ npm install -g bower`
 - Install Grunt if you don't already have it 
   - `$ npm install -g grunt-cli`
 - Run the app
