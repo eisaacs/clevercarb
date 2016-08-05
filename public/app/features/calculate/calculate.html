@@ -1,0 +1,60 @@
+<section ng-show="current==='glucoseLevel'" id="glucose-level">
+    <a id="prev" ng-click="prev()" href="#"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+    <img src="/app/assets/logo.png" />
+    <input class="form-control" type="text" ng-model="glucoseLevel"/>
+    <div class="container">
+    	<img src="/app/assets/logo.png" />
+    	<a id="next" ng-click="next()" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+    </div>
+</section>
+
+<section ng-show="current==='selectShape'" id="select-shape">
+    <div class="container">
+    	<a id="prev" ng-click="prev()" href="#"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+    </div>
+    <p class="lead">Match Shape on Container:</p>
+    <a href="#"><img class="shape" id="triangle" ng-click="next($event)" src="/app/assets/triangle.png" /></a>
+    <a href="#"><img class="shape" id="circle" ng-click="next($event)" src="/app/assets/circle.png" /></a>
+    <a href="#"><img class="shape" id="square" ng-click="next($event)" src="/app/assets/square.png" /></a>
+</section>
+
+<section ng-show="current==='weight'" id="weight">
+    <div class="container">
+    	<label id="weight">{{weight}} g</label>
+    	<a id="prev" ng-click="prev()" href="#"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+    	<a id="next" ng-click="next()" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+    </div>
+    <img src="/app/assets/logo.png" />
+</section>
+
+<section ng-show="current==='scale'" id="scale">
+    <div class="container">
+    	<img src="/app/assets/scale-animation.gif" />
+    	<img ng-show="attached" src="/app/assets/check.png" />
+    	<img ng-show="!attached" src="/app/assets/error.png" />
+    </div>
+    <a id="prev" ng-click="prev()" href="#"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+    <a id="next" ng-click="next()" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+</section>
+
+<section ng-show="current==='food'" id="food">
+    <div class="container">
+    	<img src="/app/assets/logo.png" />
+		<input class="form-control" type="text" ng-model="food"/>
+    </div>
+    <a id="prev" ng-click="prev()" href="#"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+    <a id="next" ng-click="next()" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+</section>
+
+<section ng-show="current==='calculating'" id="calculating">
+    <img src="/app/assets/calculating.gif" />
+</section>
+
+<section ng-show="current==='results'" id="results">
+    <p class="lead">Total Carbs: {{carbs}}</p>
+    <div class="container">
+    	<p class="lead">Recommended Insulin: {{insulin}}</p>
+    	<img src="/app/assets/logo.png" />
+    </div>
+    <button id="log" href="/log">LOG</button>
+</section>
