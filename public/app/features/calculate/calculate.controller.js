@@ -2,13 +2,13 @@
     'use strict';
 
     angular
-        .module('clevercarb.calculate.controller', ['calculateFactory'])
+        .module('clevercarb.calculate.controller', [])
         .controller('calculateController', calculateController);
 
-    calculateController.$inject = ['$scope', 'calculateFactory'];
+    calculateController.$inject = ['$scope',];
 
     /* @ngInject */
-    function calculateController($scope, calculateFactory){
+    function calculateController($scope){
         console.log("calculate controller");
         var nav = ['glucoseLevel', 'selectShape', 'weight', 'scale', 'food', 'calculating', 'results'];
 

@@ -1,6 +1,6 @@
-var mongoose = require('mongoose');
+/*var mongoose = require('mongoose');
 var db = require('../db')
-var record = mongoose.model('record');
+var record = mongoose.model('record');*/
 
 exports.fetch = function(req, res){
 	res.send({data: "GET"});
